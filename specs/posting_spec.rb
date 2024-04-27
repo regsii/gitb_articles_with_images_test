@@ -23,6 +23,8 @@ RSpec.describe Posting, type: :model do
 
     let(:posting) { insert :posting, body: posting_body, type: 'Article' }
 
+    # test does not check use cases where image is not found
+
     it 'should be an Article model' do
       expect(posting.type).to eq('Article')
       expect(posting.body).to eq(posting_body)
